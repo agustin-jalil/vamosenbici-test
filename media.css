@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    body{
+        width: 95vw;
+    }
+    .vamosenbici-nav{
+        width: 95vw;
+    }
+    .vamosenbici-nav-div {
+        display: none;
+    }
+    .vamosenbici-nav-div-menu {
+        display: block;
+    }
+}

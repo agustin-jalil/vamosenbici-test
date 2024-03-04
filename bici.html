@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="vamosenbici-header">
+        <nav class="vamosenbici-nav">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+            <div class="vamosenbici-nav-div">
+                <a class="hover-navbar" href="funcionamiento.html">¿Como funciona?</a>
+                <a class="hover-navbar" href="estaciones.html">Estaciones</a>
+                <a class="hover-navbar" href="bici.html">La bici</a>
+                <a class="hover-navbar" href="faq.html">Preguntas frecuetes</a>
+                <a class="hover-navbar" href="registrarse.html">Registrarse</a>
+            </div>
+            <div class="vamosenbici-nav-div-menu" id="menuButton">
+                <img src="menu.svg" alt="">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>CARACTERÍSTICAS</h1>
+        <h3>La bicicleta está exclusivamente diseñada para este sistema.</h1>
+        <div class="vamosenbici-main-caracteristicas">
+            <section class="vamosenbici-main-caracteristicas-descripcion">
+
+            </section>
+            <div class="vamosenbici-main-caracteristicas-img" style="position: relative;">
+                <img class="bike-poster" src="bike_poster.png" alt="">
+                <button class="vamosenbici-main-caracteristicas-button tuercas" id="tuercas">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button soportedoble" id="soportedoble">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button guardabarro" id="guardabarro">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button guardabarroaluminio" id="cuadroaluminio">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button cajaseguridad" id="cajaseguridad">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button frenosexpansion" id="frenosexpansion">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button luzfrontal" id="luzfrontal">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button timbre" id="timbre">
+                </button>
+                <button class="vamosenbici-main-caracteristicas-button canasto" id="canasto">
+                </button>
+            </div>
+            <style>
+                .tuercas{
+                    position: absolute; 
+                    top: 53%; 
+                    left: 17%;
+                }
+
+                .soportedoble{
+                    position: absolute; 
+                    top: 73%; 
+                    left: 30%;
+                }
+
+                .guardabarro{
+                    position: absolute; 
+                    top: 33%; 
+                    left: 15%;
+                }
+
+                .guardabarroaluminio{
+                    position: absolute; 
+                    top: 40%; 
+                    left: 60%;
+                }
+
+                .cajaseguridad{
+                    position: absolute; 
+                    top: 25%; 
+                    left: 25%;
+                }
+
+                .frenosexpansion{
+                    position: absolute; 
+                    top: 68%; 
+                    left: 70%;
+                }
+
+                .luzfrontal{
+                    position: absolute; 
+                    top: 25%; 
+                    left: 75%;
+                }
+
+                .timbre{
+                    position: absolute; 
+                    top: 3%; 
+                    left: 35%;
+                }
+
+                .canasto{
+                    position: absolute; 
+                    top: 7%;
+                    left: 80%;
+                }
+
+                .vamosenbici-main-caracteristicas-button{
+                    border: 2px solid #56b7e8;
+                    background-color: rgba(255, 255, 255, 0.384);
+                    border-radius: 50%;
+                    padding: 1rem;
+                    box-shadow: 0px 0px 10px 0px #56b7e8;
+                        
+                }
+
+                @media (max-width: 374.98px) {
+                    .vamosenbici-main-caracteristicas-button{
+                        padding: 0.5rem;
+                    }
+
+                    .tuercas{
+                        position: absolute; 
+                        top: 53%; 
+                        left: 17%;
+                    }
+
+                    .soportedoble{
+                        position: absolute; 
+                        top: 73%; 
+                        left: 33%;
+                    }
+
+                    .guardabarro{
+                        position: absolute; 
+                        top: 33%; 
+                        left: 18%;
+                    }
+
+                    .guardabarroaluminio{
+                        position: absolute; 
+                        top: 40%; 
+                        left: 58%;
+                    }
+
+                    .cajaseguridad{
+                        position: absolute; 
+                        top:37%; 
+                        left: 30%;
+                    }
+
+                    .frenosexpansion{
+                        position: absolute; 
+                        top: 68%; 
+                        left: 65%;
+                    }
+
+                    .luzfrontal{
+                        position: absolute; 
+                        top: 25%; 
+                        left: 72%;
+                    }
+
+                    .timbre{
+                        position: absolute; 
+                        top: 3%; 
+                        left: 40%;
+                    }
+
+                    .canasto{
+                        position: absolute; 
+                        top: 7%;
+                        left: 75%;
+                    }
+                }
+
+
+
+                @media (min-width: 375px) and (max-width: 424.98px) {
+                    .vamosenbici-main-caracteristicas-button{
+                        padding: 0.5rem;
+                    }
+
+                    
+                    .tuercas{
+                        position: absolute; 
+                        top: 53%; 
+                        left: 22%;
+                    }
+
+                    .soportedoble{
+                        position: absolute; 
+                        top: 73%; 
+                        left: 35%;
+                    }
+
+                    .guardabarro{
+                        position: absolute; 
+                        top: 33%; 
+                        left: 22%;
+                    }
+
+                    .guardabarroaluminio{
+                        position: absolute; 
+                        top: 40%; 
+                        left: 58%;
+                    }
+
+                    .cajaseguridad{
+                        position: absolute; 
+                        top:37%; 
+                        left: 33%;
+                    }
+
+                    .frenosexpansion{
+                        position: absolute; 
+                        top: 68%; 
+                        left: 65%;
+                    }
+
+                    .luzfrontal{
+                        position: absolute; 
+                        top: 25%; 
+                        left: 68%;
+                    }
+
+                    .timbre{
+                        position: absolute; 
+                        top: 3%; 
+                        left: 40%;
+                    }
+
+                    .canasto{
+                        position: absolute; 
+                        top: 7%;
+                        left: 72%;
+                    }
+                }
+                
+                @media (min-width: 425px) and (max-width:499.98px) {
+                    .vamosenbici-main-caracteristicas-button{
+                        padding: 0.5rem;
+                    }
+
+                    
+                    
+                    .tuercas{
+                        position: absolute; 
+                        top: 55%; 
+                        left: 20%;
+                    }
+
+                    .soportedoble{
+                        position: absolute; 
+                        top: 73%; 
+                        left: 33%;
+                    }
+
+                    .guardabarro{
+                        position: absolute; 
+                        top:34%; 
+                        left: 20%;
+                    }
+
+                    .guardabarroaluminio{
+                        position: absolute; 
+                        top: 40%; 
+                        left: 55%;
+                    }
+
+                    .cajaseguridad{
+                        position: absolute; 
+                        top:40%; 
+                        left: 30%;
+                    }
+
+                    .frenosexpansion{
+                        position: absolute; 
+                        top: 68%; 
+                        left: 65%;
+                    }
+
+                    .luzfrontal{
+                        position: absolute; 
+                        top: 25%; 
+                        left: 70%;
+                    }
+
+                    .timbre{
+                        position: absolute; 
+                        top: 3%; 
+                        left: 40%;
+                    }
+
+                    .canasto{
+                        position: absolute; 
+                        top: 7%;
+                        left: 75%;
+                    }
+                }
+
+                @media (min-width: 500px) and (max-width: 599.98px) {
+                    .vamosenbici-main-caracteristicas-button{
+                        padding: 0.7rem;
+                    }
+
+                    
+                    
+                    .tuercas{
+                        position: absolute; 
+                        top: 55%; 
+                        left: 25%;
+                    }
+
+                    .soportedoble{
+                        position: absolute; 
+                        top: 73%; 
+                        left: 36%;
+                    }
+
+                    .guardabarro{
+                        position: absolute; 
+                        top:34%; 
+                        left: 25%;
+                    }
+
+                    .guardabarroaluminio{
+                        position: absolute; 
+                        top: 40%; 
+                        left: 55%;
+                    }
+
+                    .cajaseguridad{
+                        position: absolute; 
+                        top:40%; 
+                        left: 35%;
+                    }
+
+                    .frenosexpansion{
+                        position: absolute; 
+                        top: 68%; 
+                        left: 63%;
+                    }
+
+                    .luzfrontal{
+                        position: absolute; 
+                        top: 25%; 
+                        left: 67%;
+                    }
+
+                    .timbre{
+                        position: absolute; 
+                        top: 3%; 
+                        left: 40%;
+                    }
+
+                    .canasto{
+                        position: absolute; 
+                        top: 7%;
+                        left: 70%;
+                    }
+                }
+                
+                @media (min-width: 600px) and (max-width: 767.98px) {
+                    .vamosenbici-main-caracteristicas-button{
+                        padding: 0.7rem;
+                    }
+
+                    
+                    
+                    .tuercas{
+                        position: absolute; 
+                        top: 55%; 
+                        left: 30%;
+                    }
+
+                    .soportedoble{
+                        position: absolute; 
+                        top: 73%; 
+                        left: 40%;
+                    }
+
+                    .guardabarro{
+                        position: absolute; 
+                        top:34%; 
+                        left: 30%;
+                    }
+
+                    .guardabarroaluminio{
+                        position: absolute; 
+                        top: 40%; 
+                        left: 55%;
+                    }
+
+                    .cajaseguridad{
+                        position: absolute; 
+                        top:40%; 
+                        left: 38%;
+                    }
+
+                    .frenosexpansion{
+                        position: absolute; 
+                        top: 68%; 
+                        left: 60%;
+                    }
+
+                    .luzfrontal{
+                        position: absolute; 
+                        top: 25%; 
+                        left: 63%;
+                    }
+
+                    .timbre{
+                        position: absolute; 
+                        top: 3%; 
+                        left: 43%;
+                    }
+
+                    .canasto{
+                        position: absolute; 
+                        top: 7%;
+                        left: 65%;
+                    }
+                }
+                
+                /* ACA QUEDO */
+
+                /* Medium devices (tablets, 768px and up) */
+                @media (min-width: 768px) and (max-width: 865.98px) {
+                    .vamosenbici-main-caracteristicas-button{
+                        padding: 0.6rem;
+                    }
+
+                    
+                    
+                    .tuercas{
+                        position: absolute; 
+                        top: 55%; 
+                        left: 30%;
+                    }
+
+                    .soportedoble{
+                        position: absolute; 
+                        top: 73%; 
+                        left: 41%;
+                    }
+
+                    .guardabarro{
+                        position: absolute; 
+                        top:34%; 
+                        left: 33%;
+                    }
+
+                    .guardabarroaluminio{
+                        position: absolute; 
+                        top: 40%; 
+                        left: 55%;
+                    }
+
+                    .cajaseguridad{
+                        position: absolute; 
+                        top:37%; 
+                        left: 40%;
+                    }
+
+                    .frenosexpansion{
+                        position: absolute; 
+                        top: 68%; 
+                        left: 59%;
+                    }
+
+                    .luzfrontal{
+                        position: absolute; 
+                        top: 25%; 
+                        left: 62%;
+                    }
+
+                    .timbre{
+                        position: absolute; 
+                        top: 3%; 
+                        left: 43%;
+                    }
+
+                    .canasto{
+                        position: absolute; 
+                        top: 7%;
+                        left: 65%;
+                    }
+                }
+
+                @media (min-width: 866px) and (max-width:1023.98px) {
+                    .vamosenbici-main-caracteristicas-button{
+                        padding: 0.6rem;
+                    }
+
+                    
+                    
+                    .tuercas{
+                        position: absolute; 
+                        top: 55%; 
+                        left: 35%;
+                    }
+
+                    .soportedoble{
+                        position: absolute; 
+                        top: 73%; 
+                        left: 41%;
+                    }
+
+                    .guardabarro{
+                        position: absolute; 
+                        top:35%; 
+                        left: 35%;
+                    }
+
+                    .guardabarroaluminio{
+                        position: absolute; 
+                        top: 40%; 
+                        left: 53%;
+                    }
+
+                    .cajaseguridad{
+                        position: absolute; 
+                        top:37%; 
+                        left: 41%;
+                    }
+
+                    .frenosexpansion{
+                        position: absolute; 
+                        top: 68%; 
+                        left: 57%;
+                    }
+
+                    .luzfrontal{
+                        position: absolute; 
+                        top: 25%; 
+                        left: 60%;
+                    }
+
+                    .timbre{
+                        position: absolute; 
+                        top: 3%; 
+                        left: 43%;
+                    }
+
+                    .canasto{
+                        position: absolute; 
+                        top: 7%;
+                        left: 62%;
+                    }
+                }
+            </style>
+        </div>
+        <style>
+            .vamosenbici-main-caracteristicas{
+                height: auto;
+                display: flex;
+            }
+
+            .bike-poster{
+                background: url(../img/bike_poster.png) no-repeat ;
+                height: 340px;
+                width: 345px;
+            }
+
+            @media (max-width: 1024px) {
+                .vamosenbici-main-caracteristicas-descripcion{
+                    font-size: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            @media (max-width: 425px) {
+                .vamosenbici-main-caracteristicas{
+                    height: auto;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column-reverse;
+                }
+
+                .vamosenbici-main-caracteristicas-descripcion h3{
+                 width: 80vw;
+                }
+                
+                .bike-poster{
+                    background: url(../img/bike_poster.png) no-repeat ;
+                    height: 255px; /* 75% of 340px */
+                     width: 258.75px; /* 75% of 345px */
+                }
+                .vamosenbici-main-caracteristicas-img{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-block: 3rem;
+                }
+
+            }
+
+            @media (min-width: 426px) and (max-width: 1023.9px) {
+                .vamosenbici-main-caracteristicas{
+                    height: auto;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column-reverse;
+                }
+
+                .vamosenbici-main-caracteristicas-descripcion{
+                    font-size: 1rem;
+                }
+
+                .vamosenbici-main-caracteristicas-descripcion h3{
+                 width: 80vw;
+                }
+                
+                .bike-poster{
+                    background: url(../img/bike_poster.png) no-repeat ;
+                    height: 340px; /* 75% of 340px plus 25% */
+                    width: 345px; /* 75% of 345px plus 25% */
+                    margin: 0 auto;
+                }
+                .vamosenbici-main-caracteristicas-img{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-block: 1rem;
+                }
+            }
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+                .vamosenbici-main-caracteristicas{
+                    align-items: center;
+                    margin-block: 1rem;
+                    justify-content: space-between;
+                }
+                .bike-poster {
+                    height: 515px;
+                    width: 489px;
+                }
+                
+            }
+            @media (min-width: 1440px) {
+                .vamosenbici-main-caracteristicas{
+                    margin-block: 1rem;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .bike-poster{
+                    background: url(../img/bike_poster.png) no-repeat ;
+                    height: calc(340px + (85px * 2)); /* 75% of 340px plus 25% */
+                    width: calc(345px + (86.25px * 2)); /* 75% of 345px plus 25% */
+                }
+
+
+            }
+        </style>
+
+        <script>
+            function fetchAndInsertContent(buttonId, htmlFileName) {
+                document.getElementById(buttonId).addEventListener('click', function() {
+                    // Fetch the content of the specified HTML file
+                    fetch(htmlFileName)
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insert the fetched HTML into the section
+                            document.querySelector('.vamosenbici-main-caracteristicas-descripcion').innerHTML = html;
+                        })
+                        .catch(error => {
+                            console.error('Error fetching ' + htmlFileName + ':', error);
+                        });
+                });
+            }
+
+            // Call the function for each button
+            fetchAndInsertContent('tuercas', 'tuercas.html');
+            fetchAndInsertContent('guardabarro', 'guardabarro.html');
+            fetchAndInsertContent('cajaseguridad', 'cajaseguridad.html');
+            fetchAndInsertContent('frenosexpansion', 'frenos.html');
+            fetchAndInsertContent('cuadroaluminio', 'cuadroaluminio.html');
+            fetchAndInsertContent('canasto', 'canasto.html');
+            fetchAndInsertContent('luzfrontal', 'luzfrontal.html');
+            fetchAndInsertContent('timbre', 'timbre.html');
+            fetchAndInsertContent('soportedoble', 'soportedoble.html');
+
+            // Simulate click on the timbre button to load its content by default
+            document.getElementById('timbre').click();
+        </script>
+
+
+    </main>
+
+
+    <footer>
+        <div class="vamosenbici-footer-logos">
+            <img src="logo-azul.png" alt="">
+            <img src="logo_lg.png" alt="">
+            <img src="sus-azul.png" alt="" style="height: 60px;">
+            <img src="nogo logo.png" alt="" style="border-radius: 10px; height: 50px;">
+        </div>
+        <div class="vamosenbici-footer-links">
+            <a href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://smod-catamarca.s3.amazonaws.com/pdf/1fvab49lkk8vslb_pdf_1690407336?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVBVFEMCJI3BWFSDS%2F20240215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240215T182025Z&X-Amz-Expires=604800&X-Amz-Signature=0be0ebec007c7fdf8501d3ac1bbbd32765bde63fe11f75f16082e57474b3ce10&X-Amz-SignedHeaders=host" target="_blank">
+                <img src="hoja.svg" alt="">
+                <p>
+                    Términos y condiciones
+                </p>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vamosenbici@catamarcacapital.gob.ar&amp;su=Deja%20tu%20duda..." target="_blank">
+                <img src="gmail.svg" alt="">
+                <p>
+                    vamosenbici@catamarcacapital.gob.ar
+                </p>
+            </a>
+            <a href="https://wa.me/543834227881">
+                <img src="phone.svg" alt="">
+                <p>+54 9 3834 227881</p>
+            </a>
+            <a href="privacidad.html" target="_blank" class="politicaprivacidad">
+                <p>
+                    Política de privacidad
+                </p>
+                <img src="hoja.svg" alt="">
+            </a>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <a class="hover-navbar-static" href="funcionamiento.html">¿Cómo funciona?</a>
+            <a class="hover-navbar-static" href="estaciones.html">Estaciones</a>
+            <a class="hover-navbar-static" href="bici.html">La Bici</a>
+            <a class="hover-navbar-static" href="faq.html">Preguntas frecuentes</a>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+

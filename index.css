@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('registrarse.css');
+@import url('estaciones.css');
+@import url('faq.css');
+@import url('modal.css');
+:root{
+    --vamos-color-rosa: #d95461;
+    --vamos-color-naranja: #f59c28;
+    --vamos-color-amarrillo: #f0cc1d;
+    --vamos-color-celeste: #56b7e8;
+    --vamos-color-verde: #a2c318;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 80vw;
+    margin: 0  auto;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+a , button, input {
+    all: unset; /* Unset all styles for <a> tags */
+    cursor: pointer; /* Specific cursor for <a> tags, overriding the global cursor */
+}
+
+
+
+.vamosenbici-nav {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 10px;
+}
+
+.vamosenbici-nav img {
+    height: 42px;
+}
+
+.vamosenbici-nav-div {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vamosenbici-nav-div a {
+    color: black;
+    transition: color 0.3s ease-in-out; /* Transition for color change */
+}
+
+.vamosenbici-nav-div-menu {
+    display: none;
+}
+
+
+main {
+    height: auto;
+    width: 100%;
+}
+
+.vamosenbici-main-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vamosenbici-main-div-uno{
+    width: 50%;
+    text-align: start; /* Center the text horizontally */
+}
+
+.vamosenbici-main-div-uno-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.vamosenbici-main-img {
+    width: 60%;
+}
+
+
+.vamosenbici-main-div-dos{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-block: 50px;
+    margin-block: 30px; /* Add some bottom margin for separation */
+}
+
+.vamosenbici-main-div-uno-h1-titulo {
+    font-size: 5rem; /* Responsive font size for better readability */
+    line-height: 1.2; /* Improved line height for better spacing */
+    color: #064787;
+    font-weight: bolder; /* Use 'bold' instead of '900' for better browser compatibility */
+    margin-block: 20px; /* Add some bottom margin for separation */
+}
+
+.vamosenbici-main-div-uno-h1-titulo-descarga {
+    font-size: 3rem; /* Responsive font size for better readability */
+    color: var(--vamos-color-rosa); /* Make text transparent */
+    margin-block: 20px; /* Add some bottom margin for separation */
+}
+
+
+
+.vamosenbici-main-div-uno-h1-descripcion{
+    color: #615c5e;
+}
+
+.vamosenbici-main-div-uno-h1-descripcion-descarga{
+    color: #615c5e;
+}
+
+.vamosenbici-main-div-dos-div-links{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.vamosenbici-main-div-dos-links {
+    border: 1px solid var(--vamos-color-naranja);
+    border-radius: 10px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s, box-shadow 0.3s, border-left 0.3s; /* Transitions border-color and box-shadow over 3 seconds */
+}
+
+.vamosenbici-main-div-dos-links img {
+    margin-right: 10px;
+}
+
+.vamosenbici-main-div-dos-links:hover {
+    border-color: var(--vamos-color-amarrillo); /* Change border-color on hover */
+    box-shadow: 0px 0px 5px 0px var(--vamos-color-amarrillo); /* Apply box-shadow on hover */
+}
+
+
+@media (max-width: 425px) {
+    .vamosenbici-main-img {
+        width: 100%;
+    }
+
+    .vamosenbici-main-div-dos-div-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 10px;
+    }
+
+    .vamosenbici-main-caracteristicas{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 1023.9px) {
+    .vamosenbici-main-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .vamosenbici-main-div-dos-div-links {
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 20px;
+        padding-top: 10px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    body{
+        width: 95vw;
+        min-height: 98vh;
+    }
+    .vamosenbici-main-div-uno-h1-titulo {
+        font-size: 4rem;
+    }
+
+    .vamosenbici-main-div-uno-h1-descripcion{
+        font-size: 1rem;
+    }
+
+    .vamosenbici-main-div-uno-h1-titulo-descarga {
+        font-size: 2rem;
+    }
+
+    .vamosenbici-main-div-uno-h1-descripcion-descarga {
+        font-size: 1rem;
+    }
+
+    .vamosenbici-footer-links img,
+    .vamosenbici-footer-links p {
+        font-size: small;
+    }
+
+    .vamosenbici-nav {
+        width: 95vw;
+    }
+}
+@media (min-width: 1440px) {
+    .vamosenbici-footer-links {
+        justify-content: space-between;
+    }
+
+}
+
+
+@media (max-width: 1023.9px) {
+    body{
+        width: 95vw;
+    }
+    .vamosenbici-nav{
+        width: 95vw;
+    }
+    .vamosenbici-nav-div {
+        display: none;
+    }
+    .vamosenbici-nav-div-menu {
+        display: block;
+    }
+
+    .vamosenbici-main-div{
+        flex-direction: column;
+    }
+
+    .vamosenbici-main-div-uno {
+        width: 100%;
+        text-align: start;
+    }
+
+    .vamosenbici-main-div-uno-h1-titulo {
+        font-size: 4rem;
+    }
+
+    .vamosenbici-main-div-uno-h1-descripcion{
+        font-size: 1rem;
+    }
+
+    .vamosenbici-main-div-uno-img {
+        width: 100%;
+    }
+    
+    .vamosenbici-main-div-uno-h1-titulo-descarga {
+        font-size: 2rem;
+    }
+
+    .vamosenbici-main-div-uno-h1-descripcion-descarga {
+        font-size: 1rem;
+    }
+
+
+    .vamosenbici-footer-links{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .vamosenbici-footer-logos{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .vamosenbici-footer-links img,
+    .vamosenbici-footer-links p {
+        font-size: x-small;
+    }
+
+    .politicaprivacidad{
+        flex-direction: row-reverse;
+    }
+    
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    overflow-x: hidden;
+    margin-top: 2rem;
+}
+
+.vamosenbici-footer-links{
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.vamosenbici-footer-links a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.vamosenbici-footer-links img,
+.vamosenbici-footer-links p {
+    margin-inline: 10px;
+    color: black;
+    filter: drop-shadow(2px 2px 2px lightblue);
+}
+
+.vamosenbici-footer-logos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.vamosenbici-footer-logos img{
+    height: 42px;
+}
+
+/* Define scrollbar styles */
+::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--vamos-color-verde); /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--vamos-color-celeste); /* Color of the scrollbar handle */
+    border-radius: 5px; /* Roundness of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vamos-color-amarrillo); /* Color of the scrollbar handle on hover */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    /* Your CSS rules for screens with a maximum width of 768px go here */
+    .vamosenbici-labici-seccion-img {
+        width: 100%; /* Set the width to 50% */
+        border-radius: 50%;
+    }
+}
+
+
+.vamosenbici-labici-seccion {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    width:75%;
+    border: 2px solid #56b7e8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #56b7e8;
+}
+
+.vamosenbici-labici-seccion-img {
+    width:40%; /* Set the width to 50% */
+    border-radius: 50%;
+    border: 1px solid #56b7e8;
+    box-shadow: 0px 0px 10px 0px #56b7e8;
+}
+
+.hover-navbar {
+    transition: color 0.6s ease;
+}
+
+.hover-navbar:hover {
+    color: black;
+}
+
+.hover-navbar {
+    position: relative;
+    transition: 0.5s;
+}
+
+.hover-navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(to right, 
+        var(--vamos-color-rosa), /* Red */
+        var(--vamos-color-naranja), /* Orange */
+        var(--vamos-color-amarrillo), /* Yellow */
+        var(--vamos-color-celeste), /* Green */
+        var(--vamos-color-verde) /* Blue */
+    );
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.hover-navbar:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.hover-navbar-static {
+    background-size: 100% 1px; 
+    background-image: linear-gradient(to right, 
+        var(--vamos-color-rosa),
+        var(--vamos-color-naranja),
+        var(--vamos-color-amarrillo),
+        var(--vamos-color-celeste),
+        var(--vamos-color-verde) 
+    );
+    background-position: bottom;
+    background-repeat: repeat-x;
+}

@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vamosenbici-registrar-form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.vamosenbici-registrar-label {
+display: block;
+font-weight: bold;
+padding-bottom: 5px;
+}
+
+.vamosenbici-registrar-input{
+width: 90%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.vamosenbici-registrar-input:hover{
+    border: 1px solid var(--vamos-color-verde);
+}
+
+.vamosenbici-registrar-input:focus{
+    border: 1px solid var(--vamos-color-verde);
+    box-shadow: inset 0px 0px 2px 0px var(--vamos-color-verde);
+}
+
+.vamosenbici-registrar-boton {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid var(--vamos-color-verde);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out; /* Specify the transition property */
+}
+
+.vamosenbici-registrar-boton:hover {
+    box-shadow: inset 0px 0px 5px 0px var(--vamos-color-verde);
+}
+
+
+/* Estilo para el botón personalizado */
+.custom-file-upload {
+    display: inline-block;
+    background-color: white; /* Color de fondo del botón */
+    border: 1px solid lightgrey; /* Borde del botón */
+    border-radius: 5px; /* Radio del borde del botón */
+}
+
+/* Oculta el elemento de entrada de archivo */
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+

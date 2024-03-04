@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Link to Leaflet CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+<body>
+    <header class="vamosenbici-header">
+        <nav class="vamosenbici-nav">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+            <div class="vamosenbici-nav-div">
+                <a class="hover-navbar" href="funcionamiento.html">¿Como funciona?</a>
+                <a class="hover-navbar" href="estaciones.html">Estaciones</a>
+                <a class="hover-navbar" href="bici.html">La bici</a>
+                <a class="hover-navbar" href="faq.html">Preguntas frecuetes</a>
+                <a class="hover-navbar" href="registrarse.html">Registrarse</a>
+            </div>
+            <div class="vamosenbici-nav-div-menu" id="menuButton">
+                <img src="menu.svg" alt="">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="vamosenbici-main-div-app" id="map"></div>
+    </main>
+
+    <footer>
+        <div class="vamosenbici-footer-logos">
+            <img src="logo-azul.png" alt="">
+            <img src="logo_lg.png" alt="">
+            <img src="sus-azul.png" alt="" style="height: 60px;">
+            <img src="nogo logo.png" alt="" style="border-radius: 10px; height: 50px;">
+        </div>
+        <div class="vamosenbici-footer-links">
+            <a href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://smod-catamarca.s3.amazonaws.com/pdf/1fvab49lkk8vslb_pdf_1690407336?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVBVFEMCJI3BWFSDS%2F20240215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240215T182025Z&X-Amz-Expires=604800&X-Amz-Signature=0be0ebec007c7fdf8501d3ac1bbbd32765bde63fe11f75f16082e57474b3ce10&X-Amz-SignedHeaders=host" target="_blank">
+                <img src="hoja.svg" alt="">
+                <p>
+                    Términos y condiciones
+                </p>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vamosenbici@catamarcacapital.gob.ar&amp;su=Deja%20tu%20duda..." target="_blank">
+                <img src="gmail.svg" alt="">
+                <p>
+                    vamosenbici@catamarcacapital.gob.ar
+                </p>
+            </a>
+            <a href="https://wa.me/543834227881">
+                <img src="phone.svg" alt="">
+                <p>+54 9 3834 227881</p>
+            </a>
+            <a href="privacidad.html" target="_blank" class="politicaprivacidad">
+                <p>
+                    Política de privacidad
+                </p>
+                <img src="hoja.svg" alt="">
+            </a>
+        </div>
+    </footer>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <a class="hover-navbar-static" href="funcionamiento.html">¿Cómo funciona?</a>
+            <a class="hover-navbar-static" href="estaciones.html">Estaciones</a>
+            <a class="hover-navbar-static" href="bici.html">La Bici</a>
+            <a class="hover-navbar-static" href="faq.html">Preguntas frecuentes</a>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var position = [-28.468964, -65.779018];
+
+            var map = L.map('map').setView(position, 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: ''
+            }).addTo(map);
+
+            // Custom marker icon
+            var customIcon = L.icon({
+                iconUrl: 'cabina.svg', // Add the path to your custom pointer image
+                iconSize: [32, 32], // Adjust the size of the icon
+                iconAnchor: [16, 32], // Adjust the anchor point of the icon
+                popupAnchor: [0, -32] // Adjust the popup anchor point
+            });
+
+            // Station data
+            var stations = [
+                {
+                    "id": 1,
+                    "nombre": "Nodo",
+                    "direccion": "Capital Federal 172",
+                    "ubicacion": {
+                        "latitud": -28.4767525,
+                        "longitud": -65.7874828
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                },
+                {
+                    "id": 2,
+                    "nombre": "Punto Giro (Valle Chico)",
+                    "direccion": "Av. 2",
+                    "ubicacion": {
+                        "latitud": -28.4970273,
+                        "longitud": -65.8168699
+                    },
+                    "capacidadBicicletasElectricas": 0,
+                    "capacidadBicicletasMecanicas": 8
+                },
+                {
+                    "id": 3,
+                    "nombre": "ISAC",
+                    "direccion": "San Martín 1164",
+                    "ubicacion": {
+                        "latitud": -28.4685975,
+                        "longitud": -65.7708084
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                },
+                {
+                    "id": 4,
+                    "nombre": "IFD",
+                    "direccion": "Pje. Maipú 2550",
+                    "ubicacion": {
+                        "latitud": -28.4937961,
+                        "longitud": -65.7833644
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                },
+                {
+                    "id": 5,
+                    "nombre": "Plaza de Choya",
+                    "direccion": "Av. Virgen del Valle Nte. 963",
+                    "ubicacion": {
+                        "latitud": -28.4502287,
+                        "longitud": -65.7889434
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                },
+                {
+                    "id": 6,
+                    "nombre": "Plaza 25 de Agosto",
+                    "direccion": "1 de Mayo 1222",
+                    "ubicacion": {
+                        "latitud": -28.4765769,
+                        "longitud": -65.7775816
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                },
+                {
+                    "id": 7,
+                    "nombre": "Parque de los Niños (CAPE)",
+                    "direccion": "Av. República de Venezuela",
+                    "ubicacion": {
+                        "latitud": -28.461272,
+                        "longitud": -65.767802
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                },
+                {
+                    "id": 8,
+                    "nombre": "Plaza Virgen del Valle (UNCA)",
+                    "direccion": "Ayacucho 10",
+                    "ubicacion": {
+                        "latitud": -28.4609383,
+                        "longitud": -65.7839263
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                },
+                {
+                    "id": 9,
+                    "nombre": "Plaza 25 de Mayo (Catedral)",
+                    "direccion": "Sarmiento 635-667",
+                    "ubicacion": {
+                        "latitud": -28.4688493,
+                        "longitud": -65.7796562
+                    },
+                    "capacidadBicicletasElectricas": 5,
+                    "capacidadBicicletasMecanicas": 10
+                }
+                // Add other stations similarly
+            ];
+
+            // Add markers for each station
+            stations.forEach(function(station) {
+                var marker = L.marker([station.ubicacion.latitud, station.ubicacion.longitud], { icon: customIcon }).addTo(map);
+                marker.bindPopup("<b>" + station.nombre + "</b><br>" + station.direccion);
+            });
+
+            function showAlert(message) {
+                var alertContainer = document.createElement('div');
+                alertContainer.innerHTML = '<div class="alerta-card">' +
+                    '<h1>Mapa Giro</h1>' +
+                    '<p>Clickea en los iconos de punto giro para estar informado de lo que pasa en tu barrio</p>' +
+                    message +
+                    '<button type="button" class="cerrar-btn" onclick="this.parentNode.style.animation = \'fadeOut 0.7s ease-in-out\'; setTimeout(() => this.parentNode.remove(), 500)"><img src="close.svg" alt="Close"></button></div>';
+
+                document.getElementById('map').appendChild(alertContainer);
+            }
+
+            showAlert('');
+        });
+    </script>
+    <script src="index.js"></script>
+
+</body>
+</html>
